@@ -6,7 +6,7 @@ import TextEditor from '@/app/doc/[key]/_components/text-editor';
 import Link from 'next/link';
 
 export default function DocPage({ params }: { params: Promise<{ key: string }> }) {
-  const apiKey = process.env.NEXT_PUBLIC_YORKIE_API_KEY!;
+  const apiKey = process.env.YORKIE_API_KEY!;
   const { key } = React.use(params);
   const docKey = decodeURIComponent(key || '').trim();
 
