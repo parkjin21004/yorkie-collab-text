@@ -1,0 +1,10 @@
+{
+  "name": "Yorkie Collab Text",
+  "short_name": "YorkieText",
+  "description": "Yorkie 기반 실시간 협업 텍스트 에디터 데모 v0.1",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#111827",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
