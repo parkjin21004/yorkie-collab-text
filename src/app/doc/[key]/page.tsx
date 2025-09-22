@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 export default function DocPage({ params }: { params: Promise<{ key: string }> }) {
   const apiKey = process.env.YORKIE_API_KEY!;
+  const rpcAddr = process.env.YORKIE_RPC_ADDR!;
   const { key } = React.use(params);
   const docKey = decodeURIComponent(key || '').trim();
 
@@ -53,7 +54,7 @@ export default function DocPage({ params }: { params: Promise<{ key: string }> }
         </Link>
       </div>
 
-      <YorkieProvider apiKey={apiKey}>
+      <YorkieProvider apiKey={apiKey} rpcAddr={rpcAddr}>
         {/* 초기 루트에 스키마를 지정해 새 문서에서도 text를 보장 */}
         <DocumentProvider docKey={docKey} initialRoot={{ text: '' }}>
           <TextEditor />
